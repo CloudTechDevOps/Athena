@@ -246,6 +246,25 @@ LIMIT 100;
 ```
 
 ---
+## date wise logs fetching
+```
+SELECT *
+FROM cloudwatch_logs
+WHERE line LIKE '%2026-05-23%'
+LIMIT 100;
+```
+---
+### date and time rannge
+```
+SELECT *
+FROM cloudwatch_logs
+WHERE line LIKE '%2026-05-23%'
+AND (
+      line LIKE '%17:%'
+   OR line LIKE '%18:%'
+)
+LIMIT 100;
+```
 
 ## Search YUM Logs
 
